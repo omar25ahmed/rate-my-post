@@ -21,7 +21,7 @@ RSpec.describe Posts::RatePost, type: :service do
           .and change(RatingStat, :count).by(1)
 
         rating = Rating.last
-        stat   = RatingStat.last
+        stat = RatingStat.last
 
         expect(rating.value).to eq(valid_value)
         expect(rating.user).to eq(user)
@@ -35,9 +35,9 @@ RSpec.describe Posts::RatePost, type: :service do
 
       it 'updates an existing RatingStat if present' do
         existing_stat = create(:rating_stat, post: post_record,
-                                            ratings_sum: 5,
-                                            ratings_count: 2,
-                                            average_rating: 2.5)
+                                             ratings_sum: 5,
+                                             ratings_count: 2,
+                                             average_rating: 2.5)
 
         expect { rate_post }
           .to change(Rating, :count).by(1)

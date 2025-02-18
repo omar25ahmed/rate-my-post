@@ -73,7 +73,7 @@ RSpec.describe Api::V1::PostsController, type: :request do
       json_response = JSON.parse(response.body)
 
       expect(json_response).to contain_exactly(
-        { 'ip' => '1.1.1.1', 'logins' => match_array(['User1', 'User2']) }
+        { 'ip' => '1.1.1.1', 'logins' => match_array([ 'User1', 'User2' ]) }
       )
     end
   end

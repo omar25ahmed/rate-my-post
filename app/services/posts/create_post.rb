@@ -5,9 +5,9 @@ module Posts
     end
 
     def initialize(title, body, user_ip, user_login)
-      @title      = title
-      @body       = body
-      @user_ip    = user_ip
+      @title = title
+      @body = body
+      @user_ip = user_ip
       @user_login = user_login
     end
 

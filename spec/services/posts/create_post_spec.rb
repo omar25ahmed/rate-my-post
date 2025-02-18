@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe Posts::CreatePost, type: :service do
   describe '.call' do
-    let(:title)      { 'My Title' }
-    let(:body)       { 'My Body' }
-    let(:user_ip)    { '127.0.0.1' }
+    let(:title) { 'My Title' }
+    let(:body) { 'My Body' }
+    let(:user_ip) { '127.0.0.1' }
     let(:user_login) { 'test_login' }
 
     subject(:create_post_service) do
