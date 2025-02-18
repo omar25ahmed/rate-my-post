@@ -42,8 +42,8 @@ def create_post(client, title:, body:, user_login:, user_ip:)
         title:      title,
         body:       body,
         user_login: user_login,
-        user_ip:    user_ip
-      }
+      },
+      user_ip: user_ip
     }.to_json
   end
 
