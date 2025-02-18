@@ -43,7 +43,7 @@ RSpec.describe Posts::FetchIpsMultipleAuthors, type: :service do
         expect(result).to contain_exactly(
           {
             ip: '1.2.3.4',
-            logins: match_array([user1.login, user2.login])
+            logins: match_array([ user1.login, user2.login ])
           }
         )
       end
@@ -71,11 +71,11 @@ RSpec.describe Posts::FetchIpsMultipleAuthors, type: :service do
         expect(result).to contain_exactly(
           {
             ip: '1.2.3.4',
-            logins: match_array([user1.login, user2.login])
+            logins: match_array([ user1.login, user2.login ])
           },
           {
             ip: '2.2.2.2',
-            logins: match_array([user3.login, user4.login])
+            logins: match_array([ user3.login, user4.login ])
           }
         )
       end

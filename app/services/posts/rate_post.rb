@@ -7,7 +7,7 @@ module Posts
     def initialize(post_id:, user_id:, value:)
       @post_id = post_id
       @user_id = user_id
-      @value   = value.to_i
+      @value = value.to_i
     end
 
     def call
@@ -20,7 +20,7 @@ module Posts
         rating_stat = RatingStat.find_or_create_by!(post_id: post_id)
 
         rating_stat.with_lock do
-          rating_stat.ratings_sum   += value
+          rating_stat.ratings_sum += value
           rating_stat.ratings_count += 1
           rating_stat.average_rating = rating_stat.ratings_sum.to_f / rating_stat.ratings_count
           rating_stat.save!

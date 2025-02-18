@@ -81,7 +81,7 @@ puts "=== Creating Posts & Ratings ==="
 post_count = 0
 
 while post_count < NUM_POSTS
-  batch_limit = [BATCH_SIZE, NUM_POSTS - post_count].min
+  batch_limit = [ BATCH_SIZE, NUM_POSTS - post_count ].min
   posts_in_this_batch = []
 
   batch_limit.times do

@@ -10,7 +10,7 @@ class Post < ApplicationRecord
   # Scopes
   scope :top_by_average_rating, ->(n = 10) {
     joins(:rating_stat)
-      .order('rating_stats.average_rating DESC')
+      .order("rating_stats.average_rating DESC")
       .limit(n)
   }
 end

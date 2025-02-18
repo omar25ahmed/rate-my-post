@@ -58,7 +58,7 @@ RSpec.describe Post, type: :model do
     it 'returns the top n posts by average rating in descending order' do
       result = described_class.top_by_average_rating(2)
 
-      expect(result).to eq([post1, post3])
+      expect(result).to eq([ post1, post3 ])
     end
   end
 end

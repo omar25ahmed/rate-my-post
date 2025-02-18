@@ -2,7 +2,7 @@ FactoryBot.define do
   factory :rating_stat do
     association :post
 
-    ratings_sum   { 0 }
+    ratings_sum { 0 }
     ratings_count { 0 }
     average_rating { 0.0 }
 
