@@ -2,7 +2,7 @@ module Api
   module V1
     class PostsController < ApplicationController
       def create
-        post = Posts::CreatePost.call(**post_params.to_h.symbolize_keys, user_ip: current_ip)
+        post = Posts::CreatePost.call(**post_params.to_h.symbolize_keys, user_ip: params[:user_ip] || request.remote_ip)
 
         if post.persisted?
           render json: post, serializer: PostSerializer, status: :created
